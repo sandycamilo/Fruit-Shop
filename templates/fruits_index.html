@@ -2,7 +2,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Fruits</h1>
+    <h1>The Fruit Shop</h1>
+
+    <a href='/fruits/selectfruit'>Pick Some Fruits</a>
+
     {% for fruit in fruits %}
         <h2>{{ fruit.title }}</h2>
         <small>{{ fruit.description }}</small>
