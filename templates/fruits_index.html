@@ -2,12 +2,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>The Fruit Shop</h1>
+    <h1>Fruit Shop</h1>
 
-    <a href='/fruits/selectfruit'>Pick Some Fruits</a>
+    <a href='/fruits/selectfruit'> select some fruits</a>
 
     {% for fruit in fruits %}
         <h2>{{ fruit.title }}</h2>
         <small>{{ fruit.description }}</small>
     {% endfor %}
-{% endblock %}
+{% endblock %}  

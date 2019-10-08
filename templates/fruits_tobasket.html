@@ -1,0 +1,18 @@
+<!-- templates/fruits_tobasket.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/fruits'>
+    <fieldset>
+        <legend>Basket</legend>
+        
+
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'><a href='/fruits/checkout'>Checkout</a></button>
+    </p>
+    </p>
+</form>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!-- templates/fruits_checkout.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<form method='POST' action='/fruits'>
+    <fieldset>
+        <legend>here is your order:</legend>
+    
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'><a href='/fruits/thankyou'>Pay</a></button>
+    </p>
+    </p>
+</form>
+{% endblock %}

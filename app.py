@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 
 client = MongoClient()
-db = client.TheFruitShop
+db = client.FruitShop
 fruits = db.fruits
 
 app = Flask(__name__)
@@ -16,10 +16,44 @@ def fruits_index ():
 def fruits_selectfruit():
     return render_template('fruits_selectfruit.html')
 
-@app.route('/fruits', methods=['GET'])
+@app.route('/fruits', methods=['POST'])
 def fruits_submit():
-    print(request.form.to_dict())
-    return redirect(url_for('fruits_index'))
+    fruits = {
+        'title': request.form.get('title'),
+        'description': request.form.get('description')
+    }
+    fruits.insert_one(fruits)
+    return redirect(url_for('fruits_tobasket'))
+
+@app.route('/fruits/tobasket')
+def fruits_tobasket():
+    return render_template('fruits_tobasket.html')
+
+app.route('/fruits', methods=['POST'])
+def fruits_submit():
+    fruits = {
+        'title': request.form.get('title'),
+        'description': request.form.get('description')
+    }
+    fruits.insert_one(fruits)
+    return redirect(url_for('fruits_checkout'))
+
+@app.route('/fruits/checkout')
+def fruits_checkout():
+    return render_template('fruits_checkout.html')
+
+app.route('/fruits', methods=['POST'])
+def fruits_submit():
+    fruits = {
+        'title': request.form.get('title'),
+        'description': request.form.get('description')
+    }
+    fruits.insert_one(fruits)
+    return redirect(url_for('fruits_thankyou'))
+
+@app.route('/fruits/thankyou')
+def fruits_thankyou():
+    return render_template('fruits_thankyou.html')
 
 
 if __name__ == '__main__':

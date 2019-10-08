@@ -2,18 +2,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
+
 <form method='GET' action='/fruits'>
     <fieldset>
     <legend>Pick Your Fruits</legend>
     <!-- FRUIT SELECTION -->
     <p>
-        <label for='title'>Lovely Fruit Selection</label><br>
+        
+        <label for='title'>Fruit Selection</label><br>
     </p>
     </fieldset>
 
     <!-- BUTTON -->
     <p>
-        <button type='submit'>Save Fruit to Basket</button>
+        <button type='submit'><a href='/fruits/tobasket'>Add fruit to basket</a></button>
     </p>
 </form>
 {% endblock %}
