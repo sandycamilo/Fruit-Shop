@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import os
 
 
-host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Fruit-Shop')
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/fruitshop')
 client = MongoClient(host=f'{host}?retryWrites=false')
 db = client.FruitShop
 fruits = db.fruits
