@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
+import os
 
-client = MongoClient()
+
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/Fruit-Shop')
+client = MongoClient(host=host)
 db = client.FruitShop
 fruits = db.fruits
 
