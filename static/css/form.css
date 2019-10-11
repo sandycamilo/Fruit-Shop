@@ -1,0 +1,16 @@
+input.img-checkbox[type=radio], input.img-checkbox[type=checkbox] {
+    display: none;
+  }
+  img{
+      height:100px;
+  }
+  input.img-checkbox[type=radio]+label, input.img-checkbox[type=checkbox]+label {
+    border: 10px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  input.img-checkbox[type=radio]:checked+label, input.img-checkbox[type=checkbox]:checked+label {
+    border: 10px solid #C6ECED;
+    display: inline-block;
+  }

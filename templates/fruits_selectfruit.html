@@ -3,21 +3,17 @@
 
 {% block content %}
 <form method='GET' action='/fruits'>
-    <fieldset>
-    <legend>Pick Your Fruits</legend>
-    <!-- FRUIT SELECTION -->
-    <p> 
-        <label for='title'>Fruit Selection</label><br>
-    </p>
-    </fieldset>
-
-    <img src="mango.jpg" alt="Girl in a jacket">
-
+    <h1>Pick Your Fruits</h1>
+    <h3>Fruit Selection</h3>
+    <input type="checkbox"  class="img-checkbox" name="Pineapples" id="Pineapples" value="Pineapples"><label for="Pineapples"><img height="200px" src="../static/assets/pineapple.jpg"></label>
+    <input type="checkbox"  class="img-checkbox" name="Mandarin" id="Mandarin" value="Mandarin"><label for="Mandarin"><img height="200px" src="../static/assets/mandarin.jpg"></label>
+    <input type="checkbox"  class="img-checkbox" name="Papaya" id="Papaya" value="Papaya"><label for="Papaya"><img height="200px" src="../static/assets/papaya.jpg"></label>
+    <input type="checkbox"  class="img-checkbox" name="Pear" id="Pear" value="Pear"><label for="Pear"><img height="200px" src="../static/assets/pear.jpg"></label>
+    <input type="checkbox"  class="img-checkbox" name="Quenepa" id="Quenepa" value="Quenepa"><label for="Quenepa"><img height="200px" src="../static/assets/quenepa.jpg"></label>
+    
     <!-- BUTTON -->
     <p>
-        <button type='submit'><a href='/fruits/tobasket'>Add fruit to basket</a></button>
+        <center><button type='submit'><a href='/fruits/tobasket'>Add fruit to basket</a></button></center>
     </p>
 </form>
 {% endblock %}
-
-
