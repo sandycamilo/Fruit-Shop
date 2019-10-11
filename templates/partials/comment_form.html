@@ -1,6 +1,7 @@
 <!-- templates/partials/comment_form.html -->
 
-<form>
+<form action='/fruits/comments' method='post'>
+    <input type='hidden' value='{{ fruit._id }}' name='fruit_id'/>
     <fieldset>
         <legend>Leave us a review!</legend>
         <!-- TITLE -->

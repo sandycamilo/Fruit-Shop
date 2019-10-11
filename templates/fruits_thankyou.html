@@ -7,4 +7,11 @@
         <legend>Enjoy and have a beautiful day!</legend>
     </fieldset>
 </form>
+
+<!-- Comment form -->
+{% for comment in comments %}
+{% include 'partials/comment_form.html' %}
+{% endfor %}
+
+
 {% endblock %}
