@@ -32,13 +32,13 @@ def fruits_submit():
     return redirect(url_for('fruits_tobasket'))
 
 @app.route('/fruits/tobasket')
-"""Shows everything listed in fruit basket."""
 def fruits_tobasket():
+    """Shows everything listed in fruit basket."""
     return render_template('fruits_tobasket.html')
 
 app.route('/fruits', methods=['POST'])
-"""Fruit basket with items to checkout."""
 def fruits_submit():
+    """Fruit basket with items to checkout."""
     fruits = {
         'title': request.form.get('title'),
         'description': request.form.get('description')
@@ -47,13 +47,13 @@ def fruits_submit():
     return redirect(url_for('fruits_checkout'))
 
 @app.route('/fruits/checkout')
-"""Input payment information."""
 def fruits_checkout():
+    """Input payment information."""
     return render_template('fruits_checkout.html')
 
 app.route('/fruits/thankyou', methods=['POST'])
-"""Submit payment information."""
 def fruits_submit():
+    """Submit payment information."""
     fruits = {
         'title': request.form.get('title'),
         'description': request.form.get('description')
@@ -62,8 +62,8 @@ def fruits_submit():
     return redirect(url_for('fruits_thankyou'))
 
 @app.route('/fruits/thankyou')
-"""Thank you page."""
 def fruits_thankyou():
+    """Thank you page."""
     return render_template('fruits_thankyou.html')
 
 
