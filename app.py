@@ -22,7 +22,7 @@ def fruits_selectfruit():
     return render_template('fruits_selectfruit.html', title="Fruit")
 
 @app.route('/fruits', methods=['POST'])
-def fruits_submit():
+def fruits_submitbasket():
     """Select fruit and submit to basket."""
     fruits = {
         'title': request.form.get('title'),
@@ -37,7 +37,7 @@ def fruits_tobasket():
     return render_template('fruits_tobasket.html')
 
 app.route('/fruits', methods=['POST'])
-def fruits_submit():
+def fruits_submitcheckout():
     """Fruit basket with items to checkout."""
     fruits = {
         'title': request.form.get('title'),
@@ -52,7 +52,7 @@ def fruits_checkout():
     return render_template('fruits_checkout.html')
 
 app.route('/fruits/thankyou', methods=['POST'])
-def fruits_submit():
+def fruits_submitthankyou():
     """Submit payment information."""
     fruits = {
         'title': request.form.get('title'),
@@ -63,7 +63,7 @@ def fruits_submit():
 
 @app.route('/fruits/thankyou')
 def fruits_thankyou():
-    """Thank you page."""
+    """Thank you."""
     return render_template('fruits_thankyou.html')
 
 
