@@ -18,7 +18,7 @@ def fruits_index ():
 
 @app.route('/fruits/selectfruit')
 def fruits_selectfruit():
-     """Selection of fruits."""
+    """Selection of fruits."""
     return render_template('fruits_selectfruit.html', title="Fruit")
 
 @app.route('/fruits', methods=['POST'])
