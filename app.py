@@ -2,10 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for
 from pymongo import MongoClient
 import os
 
+# my_app_db
 
-host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/FruitShop')
+host = os.environ.get('MONGODB_URI', 'mongodb://localhost:27017/fruitshop')
 client = MongoClient(host=f'{host}?retryWrites=false')
-db = client.FruitShop
+db = client.get_default_database()
 fruits = db.fruits
 
 app = Flask(__name__)
@@ -45,7 +46,7 @@ def fruits_submit():
 def fruits_checkout():
     return render_template('fruits_checkout.html')
 
-app.route('/fruits', methods=['POST'])
+app.route('/fruits/thankyou', methods=['POST'])
 def fruits_submit():
     fruits = {
         'title': request.form.get('title'),
