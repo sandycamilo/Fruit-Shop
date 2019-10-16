@@ -1,9 +1,7 @@
 # Fruit-Shop
 
+A basic website built uisng FLASK, HTML for your fruity cravings with a small but delicious selection. 
+Website takes you from homepage, to selection of fruit, to cart, to payment and lastly to confirmation page with a thank you note.
 
-Contractor Project - Store
+Code has 100% test coverage for all routes used. 
 
-1. Build and publicly deploy a FLASK website
-2. CRUD multiple resources and create relationships between them
-3. Provide 100% test coverage for the routes in your code
-4. Create basic, custom styles for your website.
